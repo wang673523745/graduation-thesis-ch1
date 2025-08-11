@@ -1,0 +1,116 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pth
+*.pt
+*.pkl
+*.ckpt
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Logs
+*.log
+logs/
+tensorboard_logs/
+
+# Data files (large files)
+*.h5
+data/
+test_img/
+test_result/
+test_RGB/
+MidImg*/
+
+# Training outputs
+models/CDDFuse_new+epoch*.pth
+models/CDDFuse_*.pth
+Mix_transformer+*.txt
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Screen session files
+创建的screen.txt
+
+# Large model files
+*.pth
+*.pt
+
+# Dataset files (too large for git)
+RoadScene_train/
+MSRS_train/
+
+# Output directories
+output/
+results/
+saved_models/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
