@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python
 __pycache__/
 *.py[cod]
@@ -114,3 +115,6 @@ coverage.xml
 .mypy_cache/
 .dmypy.json
 dmypy.json
+=======
+
+>>>>>>> 4e493ff810053cff13a356c47db7a4e799ea5065
