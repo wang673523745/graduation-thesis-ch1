@@ -118,32 +118,6 @@ python test_IVF.py
 - **Qabf**: 边缘保持质量
 - **SSIM**: 结构相似性
 
-## 🔧 模型架构
-
-### 网络组件
-
-1. **编码器 (Restormer_Encoder)**
-   - 双分支特征提取
-   - Lite Transformer处理全局特征
-   - INN处理局部细节特征
-
-2. **融合层 (LKA_moudle)**
-   - 大核注意力机制
-   - 门控卷积增强
-   - 多尺度特征融合
-
-3. **解码器 (Restormer_Decoder)**
-   - 特征重建
-   - 残差连接
-   - 输出融合图像
-
-### 关键模块
-
-- **SEBlock**: 通道注意力机制
-- **ECAmoudle**: 高效通道注意力
-- **AttentionModule**: 空间注意力
-- **Updownblock**: 上下采样模块
-
 ## 📊 性能表现
 
 ### 红外-可见光融合结果
@@ -160,35 +134,6 @@ python test_IVF.py
 | MRI_CT | 4.88 | 79.17 | 38.14 | 2.61 | 1.41 | 0.61 | 0.68 | 1.34 |
 | MRI_PET | 4.22 | 70.74 | 29.57 | 2.03 | 1.69 | 0.71 | 0.71 | 1.49 |
 
-## ⚙️ 参数调整
-
-### 训练参数优化
-
-```python
-# 在train.py中调整以下参数
-num_epochs = 200          # 增加训练轮数提高性能
-batch_size = 16          # 根据GPU内存调整
-lr = 2e-4               # 学习率调整
-coeff_decomp = 2.0      # 分解损失权重
-coeff_tv = 5.0          # 总变分损失权重
-```
-
-### 网络参数调整
-
-```python
-# 在net.py中调整网络参数
-dim = 128               # 特征维度
-num_heads = 8           # 注意力头数
-ffn_expansion_factor = 2 # 前馈网络扩展因子
-```
-
-### 数据增强
-
-```python
-# 在dataprocessing.py中调整
-img_size = 128          # 图像块大小
-stride = 200            # 滑动步长
-```
 
 ## 🛠️ 工具脚本
 
@@ -209,8 +154,3 @@ python printMidImage.py
 # 生成彩色融合图像
 python make_RGBimage.py
 ```
-
-
-## 🤝 贡献
-
-欢迎提交Issue和Pull Request来改进DSFF项目！
